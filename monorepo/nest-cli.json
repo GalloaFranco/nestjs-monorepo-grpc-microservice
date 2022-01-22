@@ -1,0 +1,32 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/client-grpc/src",
+  "monorepo": true,
+  "root": "apps/client-grpc",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/client-grpc/tsconfig.app.json",
+    "assets": ["**/*.proto"],
+    "watchAssets": true
+  },
+  "projects": {
+    "client-grpc": {
+      "type": "application",
+      "root": "apps/client-grpc",
+      "entryFile": "main",
+      "sourceRoot": "apps/client-grpc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/client-grpc/tsconfig.app.json"
+      }
+    },
+    "microservice-grpc": {
+      "type": "application",
+      "root": "apps/microservice-grpc",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice-grpc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice-grpc/tsconfig.app.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package monorepo_grpc;
+
+service MicroserviceGrpcController {
+  rpc GetRooster (google.protobuf.Empty) returns (Rooster);
+}
+
+message Rooster {
+  string message = 1;
+}
