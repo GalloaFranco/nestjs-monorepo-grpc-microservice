@@ -9,7 +9,7 @@ interface GrpcRooster {
 
 @Controller()
 export class AppController implements OnModuleInit{
-  @Client({
+  @Client({ // TODO , move this object to a separate file
     transport: Transport.GRPC,
     options: {
       package: 'monorepo_grpc',
